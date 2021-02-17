@@ -15,4 +15,4 @@ def are_anagrams(s1,s2,s3):
         return wynik
     else: 
         
-        print("Podane wyrazy sa dłuższe nic 5 liter ")
+        print("Podane wyrazy sa dłuższe niz 5 liter ")
