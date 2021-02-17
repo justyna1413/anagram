@@ -1,0 +1,18 @@
+def are_anagrams(s1,s2,s3):
+    # Python rozróżnia wielkośc liter w celu wyznanczenia anagramu z pominieciem  wielkości liter, konieczne jest zmniejszenie
+    #(alternatywnie zwiększenie liter)
+    s1,s2,s3=s1.lower(),s2.lower(),s3.lower()
+    #  konwercja strongów na listy, które będzie można  następnie posortować w kolejności alfabetycznej, tworząc nowe listy, które
+    # w przypadku anagramów są  idenyczne 
+    s1, s2, s3=list(s1),list(s2),list(s3)
+    s1.sort(),s2.sort(), s3.sort()
+    # w treści zadania , podano  max liczbę znaków  5 - warunek wprowadzenia max 5 literowego wyrazu
+    if len(s1)<=5 and len(s2)<=5 and len(s3)<=5:
+        if s1==s2 and s2==s3:
+            wynik=True
+        else:
+            wynik=False
+        return wynik
+    else: 
+        
+        print("Podane wyrazy sa dłuższe nic 5 liter ")
